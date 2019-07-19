@@ -1455,7 +1455,7 @@ func TestArgumentMatcherToPrintMismatch(t *testing.T) {
 	defer func() {
 		if r := recover(); r != nil {
 			matchingExp := regexp.MustCompile(
-				`\s+mock: Unexpected Method Call\s+-*\s+GetTime\(int\)\s+0: 1\s+The closest call I have is:\s+GetTime\(mock.argumentMatcher\)\s+0: mock.argumentMatcher\{.*?\}\s+Diff:.*\(int=1\) not matched by func\(int\) bool`)
+				`\s+mock: Unexpected Method Call\s+-*\s+GetTime\(int\)\s+0: 1\s+The closest call I have is:\s+GetTime\(mock.ArgumentMatcher\)\s+0: mock.ArgumentMatcher\{.*?\}\s+Diff:.*\(int=1\) not matched by func\(int\) bool`)
 			assert.Regexp(t, matchingExp, r)
 		}
 	}()
