@@ -9,8 +9,8 @@ import (
 	"runtime/debug"
 	"testing"
 
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
+	"github.com/tinder-edwardowens/testify/assert"
+	"github.com/tinder-edwardowens/testify/require"
 )
 
 var allTestsFilter = func(_, _ string) (bool, error) { return true, nil }
@@ -84,7 +84,7 @@ func Run(t *testing.T, suite TestingSuite) {
 	defer failOnPanic(t)
 
 	suiteSetupDone := false
-	
+
 	methodFinder := reflect.TypeOf(suite)
 	tests := []testing.InternalTest{}
 	for index := 0; index < methodFinder.NumMethod(); index++ {

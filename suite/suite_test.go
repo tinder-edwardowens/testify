@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
+	"github.com/tinder-edwardowens/testify/assert"
+	"github.com/tinder-edwardowens/testify/require"
 )
 
 // SuiteRequireTwice is intended to test the usage of suite.Require in two
@@ -350,7 +350,7 @@ func TestRunSuite(t *testing.T) {
 type SuiteSetupSkipTester struct {
 	Suite
 
-	setUp bool
+	setUp    bool
 	toreDown bool
 }
 
